@@ -29,7 +29,7 @@ public class DataStore {
             users.add(new User(s.getStudentId(), "pass123", "student"));
         }
 
-        // เพิ่มวิชา 10 วิชา (5 วิชาคณะ, 5 วิชาศึกษาทั่วไป, มี prerequisite 1 วิชา)
+        //วิชา 10 วิชา (5 วิชาคณะ, 5 วิชาศึกษาทั่วไป, มี prerequisite 1 วิชา)
         subjects.add(new Subject("05500001", "Basic Mathematics", 3, "Dr. Anan", null));
         subjects.add(new Subject("05500002", "Basic Physics", 3, "Mr. Supot", null));
         subjects.add(new Subject("05500003", "Basic Chemistry", 3, "Mr. Piya", null));
@@ -55,7 +55,7 @@ public class DataStore {
         structures.add(new SubjectStructure("20000001", "Fine Arts", "Faculty of Fine Arts", "05500005", 2));
         structures.add(new SubjectStructure("20000001", "Fine Arts", "Faculty of Fine Arts", "05500001", 2));
 
-        // เพิ่มตัวอย่างการลงทะเบียนและเกรด (แต่ละนักเรียนลง 2-3 วิชา)
+        //เพิ่มตัวอย่างการลงทะเบียนและเกรด
         registeredSubjects.add(new RegisteredSubject("69000001", "05500001", "A"));
         registeredSubjects.add(new RegisteredSubject("69000001", "05500002", "B+"));
         registeredSubjects.add(new RegisteredSubject("69000002", "05500001", "A"));

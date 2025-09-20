@@ -1,7 +1,7 @@
 package model;
 
 public class SubjectStructure {
-    private String curriculumCode;  // 8 หลัก
+    private String curriculumCode;  //8หลัก
     private String curriculumName;
     private String department;
     private String requiredSubjectId;

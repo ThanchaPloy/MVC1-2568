@@ -3,7 +3,7 @@ package model;
 public class User {
     private String username;
     private String password;
-    private String role; // admin, student
+    private String role; //admin, student
 
     
     public User(String username, String password, String role) {

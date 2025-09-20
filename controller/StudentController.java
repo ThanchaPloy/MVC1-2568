@@ -39,7 +39,7 @@ public class StudentController {
     }
 
     private void showRegisterSubject() {
-        // RULE: นักเรียนต้องมีอายุ ≥ 15 ปี
+        //นักเรียนต้องมีอายุ ≥ 15 ปี
         int age = calculateAge(student.getBirthDate());
         if (age < 15) {
             JOptionPane.showMessageDialog(view, "You must be at least 15 years old to register subjects.");
@@ -73,7 +73,7 @@ public class StudentController {
 
         RegisterSubjectView registerView = new RegisterSubjectView(subjectRows);
 
-        // Event ลงทะเบียน
+        //ลงทะเบียน
         registerView.registerBtn.addActionListener(e -> {
             int selectedRow = registerView.subjectTable.getSelectedRow();
             if (selectedRow >= 0) {
@@ -99,7 +99,7 @@ public class StudentController {
                                     .filter(rs -> rs.getStudentId().equals(student.getStudentId())
                                             && rs.getSubjectId().equals(sub.getPrerequisiteSubjectId()))
                                     .findFirst();
-                    // มีการลงทะเบียนวิชาบังคับก่อน และต้องมีเกรดแล้วเท่านั้น(เกรด != null)
+                    //มีการลงทะเบียนวิชาบังคับก่อน และต้องมีเกรดแล้วเท่านั้น(เกรด != null)
                     if (!prereq.isPresent() || prereq.get().getGrade() == null) {
                         canRegister = false;
                     }
@@ -118,7 +118,7 @@ public class StudentController {
         registerView.setVisible(true);
     }
 
-    // อัปเดตตารางวิชาในโปรไฟล์หลังลงทะเบียนใหม่
+    //อัปเดตตารางวิชาในโปรไฟล์หลังลงทะเบียนใหม่
     private void updateStudentProfileSubjects() {
         List<RegisteredSubject> regSub = DataStore.registeredSubjects.stream()
                 .filter(r -> r.getStudentId().equals(student.getStudentId()))
